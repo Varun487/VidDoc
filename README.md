@@ -56,6 +56,8 @@ git clone "git@github.com:Varun487/VidDoc.git"
 
 cd VidDoc
 
+pip3 install -r requirements.txt
+
 pyhton3 VidDoc/manage.py runserver
 ```
 3. To make changes to the database
