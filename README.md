@@ -53,6 +53,16 @@ An online doctor consultation software (similar to the Practo website).
 
 ```
 git clone "git@github.com:Varun487/VidDoc.git"
+
+cd VidDoc
+
+pyhton3 VidDoc/manage.py runserver
+```
+3. To make changes to the database
+```
+python3 VidDoc/manage.py makemigrations
+
+python3 VidDoc/manage.py migrate
 ```
 
 # Project Members
