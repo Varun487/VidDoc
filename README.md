@@ -60,11 +60,15 @@ pip3 install -r requirements.txt
 
 pyhton3 VidDoc/manage.py runserver
 ```
-3. To make changes to the database
+3. To migrate changes to the database:
 ```
 python3 VidDoc/manage.py makemigrations
 
 python3 VidDoc/manage.py migrate
+```
+4. Create a superuser for the database:
+```
+python3 VidDoc/manage.py createsuperuser
 ```
 
 # Project Members
