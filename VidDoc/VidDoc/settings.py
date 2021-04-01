@@ -28,6 +28,12 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+PAYTM_MERCHANT_ID = '<your_merchant_id>'
+PAYTM_SECRET_KEY = '<your_paytm_secret_key>'
+PAYTM_WEBSITE = 'WEBSTAGING'
+PAYTM_CHANNEL_ID = 'WEB'
+PAYTM_INDUSTRY_TYPE_ID = 'Retail'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +44,8 @@ INSTALLED_APPS = [
     # Project apps
     'UserAuthentication',
     'Appointments',
+    'Consultation',
+    'Payments'
 ]
 
 MIDDLEWARE = [
