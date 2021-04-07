@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VidDoc Login</title>
+</head>
+<body>
+
+    <center><h1>Login to VidDoc</h1></center>
+    <center>or <a href="/register">register</a></center>
+
+    <form action="/login/userauth/" method="post"> {% csrf_token %}
+
+        <div class="container">
+
+            <label for="name"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="name" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Login</button>
+
+            {% if try_again %}
+
+            <h3>Please try again, either the username or password was wrong</h3>
+
+            {% endif %}
+
+            {% if not_registered %}
+
+            <h3>It looks like it's your first time here. Please register by clicking this <a href="/register"> link </a></h3>
+
+            {% endif %}
+
+      </div>
+
+    </form>
+
+</body>
+</html>

@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'UserAuthentication',
     'Appointments',
     'Consultation',
-    'Payments'
+    'Payments',
+    'Recommendation',
+    'Reminders'
 ]
 
 MIDDLEWARE = [

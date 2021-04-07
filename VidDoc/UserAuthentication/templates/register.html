@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VidDoc Register</title>
+</head>
+<body>
+
+    <center><h1>Register to VidDoc</h1></center>
+    <center>or <a href="/login">login</a></center>
+    <center>After successful registration, you will be redirected to login again with your credentials</center>
+
+    <form action="/register/userauth/" method="post"> {% csrf_token %}
+      <div class="container">
+        <label for="name"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="name" required><br>
+
+          {% if invalid_user %}
+
+          <h5>A user with this name already exists, please try again with a different username.</h5>
+
+          {% endif %}
+
+        <label for="name"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required><br>
+
+        {% if not valid_email %}
+
+          <h5>Please enter a valid email.</h5>
+
+        {% endif %}
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required><br>
+
+
+          <label for="repeat_password"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Enter Password" name="repeat_password" required><br>
+
+        {% if not valid_password %}
+
+          <h5>The passwords do not match! Please enter the same password in both fields.</h5>
+
+        {% endif %}
+
+          <label for="address"><b>Address</b></label>
+        <textarea name="address" rows="3" cols="100" required></textarea><br>
+
+          <label for="age"><b>Age</b></label>
+        <input type="number" name="age" required><br>
+
+        {% if not valid_age %}
+
+          <h5>Please enter an age within the range of 0 - 130 (inclusive)</h5>
+
+        {% endif %}
+
+          <label for="city"><b>City</b></label>
+        <input type="text" placeholder="Enter city" name="city" required><br>
+
+          <label for="phone_number"><b>Phone Number</b></label>
+        <input type="number" placeholder="Enter phone number" name="phone_number" required><br>
+
+        {% if not valid_phone_number %}
+
+          <h5>Please a 10 digit phone number</h5>
+
+        {% endif %}
+
+        <button type="submit">Register</button>
+
+      </div>
+    </form>
+
+</body>
+</html>

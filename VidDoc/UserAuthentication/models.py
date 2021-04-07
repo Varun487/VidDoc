@@ -5,7 +5,7 @@ from datetime import datetime
 # Create your models here.
 class User(models.Model):
     name = models.CharField(max_length=200)
-    email = models.CharField(max_length=500)
+    email = models.EmailField()
     password = models.CharField(max_length=64)
     address = models.TextField()
     age = models.IntegerField()
@@ -20,6 +20,7 @@ class User(models.Model):
 class Doctor(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     speciality = models.CharField(max_length=500)
+    symptoms = models.TextField(default=None, blank=True, null=True)
 
     def __str__(self):
         return self.user.name
