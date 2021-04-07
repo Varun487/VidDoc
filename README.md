@@ -81,6 +81,7 @@ python3 VidDoc/manage.py createsuperuser
 
 # TODO
 #### To be completed before 15th April
+- Clarify whether previous deliverables have been completed and submitted
 - Explain all work done
 - Fix all diagrams and documents
 - Complete appointments
