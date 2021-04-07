@@ -78,3 +78,15 @@ python3 VidDoc/manage.py createsuperuser
 2. Shashwath S Kumar - PES2201800623 
 3. Hritik Shanbhag - PES2201800082
 4. Ajay - PES2201800724
+
+# TODO
+#### To be completed before 15th April
+- Explain all work done
+- Fix all diagrams and documents
+- Complete appointments
+- Complete Consultations
+- Complete payments
+- Complete Recommendations
+- Complete email reminders
+- Complete test plan document
+- Get approval from a teacher
