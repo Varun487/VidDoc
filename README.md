@@ -80,11 +80,22 @@ python3 VidDoc/manage.py createsuperuser
 4. Ajay - PES2201800724
 
 # TODO
-#### To be completed before 15th April
-- Clarify whether previous deliverables have been completed and submitted
+### To be completed before 15th April
 - Explain all work done
 - Fix all diagrams and documents
 - Complete appointments
+  - Fix entering appointments if not logged in `BUG`
+  - List all upcoming appointments for a user `In Progress`
+  - Button for Booking new appointments
+  - Page with form for appointment
+    - Redirects to recommendations of doctors selecting speciality and symptoms
+    - Redirects to payments
+    - Fix Data consistency across all pages
+    - Fix appointment booking confirmation across payment
+  - Cancel existing appointment
+    - Redirects to refund
+    - Fix Data consistency across all pages
+    - Fix appointment booking confirmation across payment
 - Complete Consultations
 - Complete payments
 - Complete Recommendations

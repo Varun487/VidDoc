@@ -19,20 +19,3 @@ class Appointment(models.Model):
 
     def __str__(self):
         return self.title
-
-
-class Prescription(models.Model):
-    appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
-    notes = models.TextField()
-
-    def __str__(self):
-        return self.appointment.title + " Prescription"
-
-
-class Medicines(models.Model):
-    prescription = models.ForeignKey(Prescription, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
-    food_data = models.CharField(max_length=20, choices=FOOD_CHOICES, default='1')
-
-    def __str__(self):
-        return self.name + self.prescription

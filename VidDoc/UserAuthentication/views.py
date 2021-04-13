@@ -4,9 +4,9 @@ import hashlib
 from datetime import datetime
 import re
 
+
 # Create your views here.
 def index_login(request):
-
     context = {
         "try_again": False,
         "not_registered": False
@@ -28,7 +28,6 @@ def index_register(request):
 
 
 def auth_login(request):
-
     if request.method == "POST":
         name = request.POST['name']
         password = request.POST['password']
@@ -40,10 +39,11 @@ def auth_login(request):
         authorised = User.objects.filter(name=name, password=hashlib.sha256(password.encode()).hexdigest())
         not_registered = not User.objects.filter(name=name)
 
-        print(authorised)
-        print(not_registered)
+        # print(authorised)
+        # print(not_registered)
 
         if authorised:
+
             return redirect('/appointments')
 
         elif not_registered:
@@ -64,7 +64,6 @@ def auth_login(request):
 
 
 def auth_register(request):
-
     if request.method == "POST":
         name = request.POST['name']
         email = request.POST['email']
