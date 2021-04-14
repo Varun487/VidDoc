@@ -81,9 +81,10 @@ python3 VidDoc/manage.py createsuperuser
 
 # TODO
 ### To be completed before 15th April
-- Explain all work done
-- Fix all diagrams and documents
-- AUTHENTICATION ![DONE](https://img.shields.io/badge/FEATURE-INPROGRESS-yellow)
+- Explain all work done  ![INCOMPLETE](https://img.shields.io/badge/MEETING-INCOMPLETE-orange)
+- Fix all diagrams and documents  ![INCOMPLETE](https://img.shields.io/badge/DOC-INCOMPLETE-orange)
+- Automated Testing  ![INCOMPLETE](https://img.shields.io/badge/FEATURE-INCOMPLETE-orange)
+- AUTHENTICATION ![FEATURE](https://img.shields.io/badge/FEATURE-INPROGRESS-yellow)
   - Login ![DONE](https://img.shields.io/badge/DONE-brightgreen)
     - Enter site if user exists ![DONE](https://img.shields.io/badge/DONE-brightgreen)
     - Mention if any required fields not filled ![DONE](https://img.shields.io/badge/DONE-brightgreen)
@@ -91,20 +92,20 @@ python3 VidDoc/manage.py createsuperuser
     - Mention if wrong password ![DONE](https://img.shields.io/badge/DONE-brightgreen)
     - If remember me is checked, redirect to site next time ![DONE](https://img.shields.io/badge/DONE-brightgreen)
     - If remember me is not checked, expire cookie at browser window close ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-  - Registers
-    - Redirect to login after successful registration
-    - Mention if
-      - Any required fields not filled
-      - Username not available
-      - User already registered  
-      - Email already registered
-      - Email confirmation
-      - Password not matching
-      - Age not correct
-      - Phone number not correct
+  - Register ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+    - Redirect to login after successful registration ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+    - Mention if ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+      - Any required fields not filled ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+      - Username not available ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+      - Wrong email format ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+      - Email already registered ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+      - Password not matching ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+      - Age not correct ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+      - Phone number not correct ![DONE](https://img.shields.io/badge/DONE-brightgreen)
     - Not able to get correct address information ![DONE](https://img.shields.io/badge/BUG-red)
+    - Write tests  ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
 - Complete appointments ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
-  - List all upcoming appointments for a user
+  - List all upcoming appointments for a user  ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
   - Button for Booking new appointments
   - Page with form for appointment
     - Redirects to recommendations of doctors selecting speciality and symptoms

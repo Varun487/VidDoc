@@ -119,17 +119,19 @@ def auth_register(request):
 
         invalid_user = User.objects.filter(name=name)
         valid_email = re.match(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", email) is not None
+        email_exists = User.objects.filter(email=email)
         valid_password = password == repeat_password
         valid_age = 0 <= int(age) <= 130
         valid_phone_number = len(phone_number) == 10
 
         # print('Invalid user:', not invalid_user)
         # print('Valid email:', valid_email)
+        # print('Other user: ', User.objects.filter(email=email))
         # print('Valid password:', valid_password)
         # print('Valid age:', valid_age)
         # print('Valid phone number:', valid_phone_number)
 
-        authorised = (not invalid_user) and valid_email and valid_age and valid_password and valid_phone_number
+        authorised = (not invalid_user) and valid_email and not email_exists and valid_age and valid_password and valid_phone_number
 
         # print(authorised)
 
@@ -152,6 +154,7 @@ def auth_register(request):
             context = {
                 "invalid_user": invalid_user,
                 "valid_email": valid_email,
+                "email_exists": email_exists,
                 "valid_password": valid_password,
                 "valid_age": valid_age,
                 "valid_phone_number": valid_phone_number

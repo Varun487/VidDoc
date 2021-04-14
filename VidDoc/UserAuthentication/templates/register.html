@@ -30,6 +30,12 @@
 
         {% endif %}
 
+        {% if email_exists %}
+
+          <h5>This email is registered with us. Please login or register with another email.</h5>
+
+        {% endif %}
+
         <label for="password"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required><br>
 
