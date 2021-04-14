@@ -19,6 +19,9 @@
             <label for="password"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required>
 
+            <label for="remember"><b>Remember Me</b></label>
+            <input type="checkbox" placeholder="Enter Password" name="remember">
+
             <button type="submit">Login</button>
 
             {% if try_again %}
@@ -29,7 +32,7 @@
 
             {% if not_registered %}
 
-            <h3>It looks like it's your first time here. Please register by clicking this <a href="/register"> link </a></h3>
+            <h3>It looks like it's your first time here. Please <a href="/register"> register here </a></h3>
 
             {% endif %}
 

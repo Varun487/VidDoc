@@ -83,9 +83,28 @@ python3 VidDoc/manage.py createsuperuser
 ### To be completed before 15th April
 - Explain all work done
 - Fix all diagrams and documents
+- AUTHENTICATION
+  - Login `DONE`
+    - Enter site if user exists `DONE`
+    - Mention if any required fields not filled `DONE`
+    - Mention if user not registered `DONE`
+    - Mention if wrong password `DONE`
+    - If remember me is checked, redirect to site next time `DONE`
+    - If remember me is not checked, expire cookie at browser window close `DONE`
+  - Register
+    - Redirect to login after successful registration
+    - Mention if
+      - Any required fields not filled
+      - Username not available
+      - User already registered  
+      - Email already registered
+      - Email confirmation
+      - Password not matching
+      - Age not correct
+      - Phone number not correct
+    - Not able to get correct address information `BUG`
 - Complete appointments
-  - Fix entering appointments if not logged in `BUG`
-  - List all upcoming appointments for a user `In Progress`
+  - List all upcoming appointments for a user
   - Button for Booking new appointments
   - Page with form for appointment
     - Redirects to recommendations of doctors selecting speciality and symptoms

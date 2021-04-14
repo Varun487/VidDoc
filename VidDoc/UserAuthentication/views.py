@@ -1,18 +1,37 @@
 from django.shortcuts import render, redirect
 from .models import User
 import hashlib
-from datetime import datetime
 import re
 
 
-# Create your views here.
+def login_required(func):
+    def inner(*args, **kwargs):
+        if 'user_id' in args[0].session:
+            return func(*args, **kwargs)
+        else:
+            return redirect('/login')
+
+    return inner
+
+
 def index_login(request):
+    # print(request.session.keys())
+
+    if 'user_id' in request.session.keys():
+        return redirect('/appointments')
+
     context = {
         "try_again": False,
         "not_registered": False
     }
 
     return render(request, 'login.html', context)
+
+
+def index_logout(request):
+    if 'user_id' in request.session.keys():
+        del request.session['user_id']
+    return redirect('/login')
 
 
 def index_register(request):
@@ -32,6 +51,12 @@ def auth_login(request):
         name = request.POST['name']
         password = request.POST['password']
 
+        # print(request.POST)
+
+        if 'remember' not in request.POST:
+            # print('expiry set to 0')
+            request.session.set_expiry(0)
+
         # print('name: ', name)
         # print('password: ', password)
         # print('sha256 of password: ', hashlib.sha256(password.encode()).hexdigest())
@@ -43,7 +68,7 @@ def auth_login(request):
         # print(not_registered)
 
         if authorised:
-
+            request.session['user_id'] = authorised[0].id
             return redirect('/appointments')
 
         elif not_registered:
@@ -73,7 +98,6 @@ def auth_register(request):
         age = request.POST['age']
         city = request.POST['city']
         phone_number = request.POST['phone_number']
-        date = datetime.now()
 
         # print('name: ', name)
         # print('email: ', email)
@@ -107,7 +131,7 @@ def auth_register(request):
 
         authorised = (not invalid_user) and valid_email and valid_age and valid_password and valid_phone_number
 
-        print(authorised)
+        # print(authorised)
 
         if authorised:
 
