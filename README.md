@@ -84,7 +84,14 @@ python3 VidDoc/manage.py createsuperuser
 - Explain all work done  ![INCOMPLETE](https://img.shields.io/badge/MEETING-INCOMPLETE-orange)
 - Fix all diagrams and documents  ![INCOMPLETE](https://img.shields.io/badge/DOC-INCOMPLETE-orange)
 - Automated Testing  ![INCOMPLETE](https://img.shields.io/badge/FEATURE-INCOMPLETE-orange)
-- AUTHENTICATION ![FEATURE](https://img.shields.io/badge/FEATURE-INPROGRESS-yellow)
+    - Set up selenium automated testing ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
+    - Write 10 tests for Authentication  ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
+    - Write 10 tests for Appointments ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
+    - Write 10 tests for Consultations ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
+    - Write 10 tests for Payments ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
+    - Write 10 tests for Recommendations ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
+    - Write 10 tests for Email Reminders ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
+- AUTHENTICATION ![FEATURE](https://img.shields.io/badge/FEATURE-COMPLETE-brightgreen)
   - Login ![DONE](https://img.shields.io/badge/DONE-brightgreen)
     - Enter site if user exists ![DONE](https://img.shields.io/badge/DONE-brightgreen)
     - Mention if any required fields not filled ![DONE](https://img.shields.io/badge/DONE-brightgreen)
@@ -102,10 +109,9 @@ python3 VidDoc/manage.py createsuperuser
       - Password not matching ![DONE](https://img.shields.io/badge/DONE-brightgreen)
       - Age not correct ![DONE](https://img.shields.io/badge/DONE-brightgreen)
       - Phone number not correct ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - Not able to get correct address information ![DONE](https://img.shields.io/badge/BUG-red)
-    - Write tests  ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
-- Complete appointments ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
-  - List all upcoming appointments for a user  ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
+    - Not able to get correct address information ![BUG](https://img.shields.io/badge/BUG-FIXED-brightgreen)
+- Complete Appointments ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
+  - List all upcoming appointments for a user  
   - Button for Booking new appointments
   - Page with form for appointment
     - Redirects to recommendations of doctors selecting speciality and symptoms
@@ -117,8 +123,8 @@ python3 VidDoc/manage.py createsuperuser
     - Fix Data consistency across all pages
     - Fix appointment booking confirmation across payment
 - Complete Consultations  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
-- Complete payments  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
+- Complete Payments  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
 - Complete Recommendations  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
-- Complete email reminders  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
+- Complete Email Reminders  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
 - Complete test plan document  ![DONE](https://img.shields.io/badge/DOC-INCOMPLETE-red)
 - Complete final report  ![DONE](https://img.shields.io/badge/DOC-INCOMPLETE-red)
