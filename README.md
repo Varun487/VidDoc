@@ -81,36 +81,36 @@ python3 VidDoc/manage.py createsuperuser
 
 # TODO
 ### To be completed before 15th April
-- Explain all work done  ![INCOMPLETE](https://img.shields.io/badge/MEETING-INCOMPLETE-orange)
-- Fix all diagrams and documents  ![INCOMPLETE](https://img.shields.io/badge/DOC-INCOMPLETE-orange)
-- Automated Testing  ![INCOMPLETE](https://img.shields.io/badge/FEATURE-INCOMPLETE-orange)
-    - Set up selenium automated testing ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
-    - Write 10 tests for Authentication  ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
-    - Write 10 tests for Appointments ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
-    - Write 10 tests for Consultations ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
-    - Write 10 tests for Payments ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
-    - Write 10 tests for Recommendations ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
-    - Write 10 tests for Email Reminders ![INCOMPLETE](https://img.shields.io/badge/INCOMPLETE-orange)
-- AUTHENTICATION ![FEATURE](https://img.shields.io/badge/FEATURE-COMPLETE-brightgreen)
-  - Login ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - Enter site if user exists ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - Mention if any required fields not filled ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - Mention if user not registered ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - Mention if wrong password ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - If remember me is checked, redirect to site next time ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - If remember me is not checked, expire cookie at browser window close ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-  - Register ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - Redirect to login after successful registration ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - Mention if ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-      - Any required fields not filled ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-      - Username not available ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-      - Wrong email format ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-      - Email already registered ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-      - Password not matching ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-      - Age not correct ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-      - Phone number not correct ![DONE](https://img.shields.io/badge/DONE-brightgreen)
-    - Not able to get correct address information ![BUG](https://img.shields.io/badge/BUG-FIXED-brightgreen)
-- Complete Appointments ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
+- Explain all work done  ![MEETINGINCOMPLETE]
+- Fix all diagrams and documents  ![DOCINCOMPLETE]
+- Automated Testing  ![FEATUREINCOMPLETE]
+    - Set up selenium automated testing ![INCOMPLETE]
+    - Write 10 tests for Authentication  ![INCOMPLETE]
+    - Write 10 tests for Appointments ![INCOMPLETE]
+    - Write 10 tests for Consultations ![INCOMPLETE]
+    - Write 10 tests for Payments ![INCOMPLETE]
+    - Write 10 tests for Recommendations ![INCOMPLETE]
+    - Write 10 tests for Email Reminders ![INCOMPLETE]
+- AUTHENTICATION ![FEATURECOMPLETE]
+  - Login ![DONE]
+    - Enter site if user exists ![DONE]
+    - Mention if any required fields not filled ![DONE]
+    - Mention if user not registered ![DONE]
+    - Mention if wrong password ![DONE]
+    - If remember me is checked, redirect to site next time ![DONE]
+    - If remember me is not checked, expire cookie at browser window close ![DONE]
+  - Register ![DONE]
+    - Redirect to login after successful registration ![DONE]
+    - Mention if ![DONE]
+      - Any required fields not filled ![DONE]
+      - Username not available ![DONE]
+      - Wrong email format ![DONE]
+      - Email already registered ![DONE]
+      - Password not matching ![DONE]
+      - Age not correct ![DONE]
+      - Phone number not correct ![DONE]
+    - Not able to get correct address information ![BUGFIXED]
+- Complete Appointments ![FEATUREINCOMPLETE]
   - List all upcoming appointments for a user  
   - Button for Booking new appointments
   - Page with form for appointment
@@ -122,9 +122,17 @@ python3 VidDoc/manage.py createsuperuser
     - Redirects to refund
     - Fix Data consistency across all pages
     - Fix appointment booking confirmation across payment
-- Complete Consultations  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
-- Complete Payments  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
-- Complete Recommendations  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
-- Complete Email Reminders  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
-- Complete test plan document  ![DONE](https://img.shields.io/badge/DOC-INCOMPLETE-red)
-- Complete final report  ![DONE](https://img.shields.io/badge/DOC-INCOMPLETE-red)
+- Complete Consultations  ![FEATUREINCOMPLETE]
+- Complete Payments  ![FEATUREINCOMPLETE]
+- Complete Recommendations  ![FEATUREINCOMPLETE]
+- Complete Email Reminders  ![FEATUREINCOMPLETE]
+- Complete test plan document  ![FEATUREINCOMPLETE]
+- Complete final report  ![DOCINCOMPLETE]
+
+[DONE]: https://img.shields.io/badge/DONE-brightgreen
+[INCOMPLETE]: https://img.shields.io/badge/INCOMPLETE-red
+[BUGFIXED]: https://img.shields.io/badge/BUG-FIXED-brightgreen
+[FEATUREINCOMPLETE]: https://img.shields.io/badge/FEATURE-INCOMPLETE-red
+[FEATURECOMPLETE]: https://img.shields.io/badge/FEATURE-COMPLETE-green
+[MEETINGINCOMPLETE]: https://img.shields.io/badge/MEETING-INCOMPLETE-red
+[DOCINCOMPLETE]: https://img.shields.io/badge/DOC-INCOMPLETE-red
