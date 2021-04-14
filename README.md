@@ -84,8 +84,8 @@ python3 VidDoc/manage.py createsuperuser
 - Explain all work done  ![MEETINGINCOMPLETE]
 - Fix all diagrams and documents  ![DOCINCOMPLETE]
 - Automated Testing  ![FEATUREINCOMPLETE]
-    - Set up selenium automated testing ![INCOMPLETE]
-    - Write 10 tests for Authentication  ![INCOMPLETE]
+    - Set up selenium automated testing ![DONE]
+    - Write 10 tests for Authentication  ![DONE]
     - Write 10 tests for Appointments ![INCOMPLETE]
     - Write 10 tests for Consultations ![INCOMPLETE]
     - Write 10 tests for Payments ![INCOMPLETE]
@@ -133,6 +133,6 @@ python3 VidDoc/manage.py createsuperuser
 [INCOMPLETE]: https://img.shields.io/badge/INCOMPLETE-red
 [BUGFIXED]: https://img.shields.io/badge/BUG-FIXED-brightgreen
 [FEATUREINCOMPLETE]: https://img.shields.io/badge/FEATURE-INCOMPLETE-red
-[FEATURECOMPLETE]: https://img.shields.io/badge/FEATURE-COMPLETE-green
+[FEATURECOMPLETE]: https://img.shields.io/badge/FEATURE-COMPLETE-brightgreen
 [MEETINGINCOMPLETE]: https://img.shields.io/badge/MEETING-INCOMPLETE-red
 [DOCINCOMPLETE]: https://img.shields.io/badge/DOC-INCOMPLETE-red

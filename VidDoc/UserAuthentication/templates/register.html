@@ -6,74 +6,74 @@
 </head>
 <body>
 
-    <center><h1>Register to VidDoc</h1></center>
+    <center><h1 id="register_home">Register to VidDoc</h1></center>
     <center>or <a href="/login">login</a></center>
     <center>After successful registration, you will be redirected to login again with your credentials</center>
 
     <form action="/register/userauth/" method="post"> {% csrf_token %}
       <div class="container">
         <label for="name"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="name" required><br>
+        <input type="text" placeholder="Enter Username" name="name" id="name" required><br>
 
           {% if invalid_user %}
 
-          <h5>A user with this name already exists, please try again with a different username.</h5>
+          <h5 id="invalid_user">A user with this name already exists, please try again with a different username.</h5>
 
           {% endif %}
 
         <label for="name"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required><br>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
 
         {% if not valid_email %}
 
-          <h5>Please enter a valid email.</h5>
+          <h5 id="invalid_email">Please enter a valid email.</h5>
 
         {% endif %}
 
         {% if email_exists %}
 
-          <h5>This email is registered with us. Please login or register with another email.</h5>
+          <h5 id="email_exists">This email is registered with us. Please login or register with another email.</h5>
 
         {% endif %}
 
         <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required><br>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required><br>
 
 
           <label for="repeat_password"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Enter Password" name="repeat_password" required><br>
+        <input type="password" placeholder="Enter Password" name="repeat_password" id="repeat_password" required><br>
 
         {% if not valid_password %}
 
-          <h5>The passwords do not match! Please enter the same password in both fields.</h5>
+          <h5 id="passwords_no_match">The passwords do not match! Please enter the same password in both fields.</h5>
 
         {% endif %}
 
           <label for="address"><b>Address</b></label>
-        <textarea name="address" rows="3" cols="100" required></textarea><br>
+        <textarea name="address" rows="3" cols="100" id="address" required></textarea><br>
 
           <label for="age"><b>Age</b></label>
-        <input type="number" name="age" required><br>
+        <input type="number" name="age" id="age" required><br>
 
         {% if not valid_age %}
 
-          <h5>Please enter an age within the range of 0 - 130 (inclusive)</h5>
+          <h5 id="invalid_age">Please enter an age within the range of 0 - 130 (inclusive)</h5>
 
         {% endif %}
 
           <label for="city"><b>City</b></label>
-        <input type="text" placeholder="Enter city" name="city" required><br>
+        <input type="text" placeholder="Enter city" name="city" id="city" required><br>
 
           <label for="phone_number"><b>Phone Number</b></label>
-        <input type="number" placeholder="Enter phone number" name="phone_number" required><br>
+        <input type="number" placeholder="Enter phone number" name="phone_number" id="phone_number" required><br>
 
         {% if not valid_phone_number %}
 
-          <h5>Please a 10 digit phone number</h5>
+          <h5 id="invalid_phone_number">Please a 10 digit phone number</h5>
 
         {% endif %}
 
-        <button type="submit">Register</button>
+        <button type="submit" id="register_button">Register</button>
 
       </div>
     </form>

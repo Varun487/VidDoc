@@ -6,33 +6,33 @@
 </head>
 <body>
 
-    <center><h1>Login to VidDoc</h1></center>
-    <center>or <a href="/register">register</a></center>
+    <center><h1 id="login_home">Login to VidDoc</h1></center>
+    <center>or <a href="/register" id="register_link">register</a></center>
 
     <form action="/login/userauth/" method="post"> {% csrf_token %}
 
         <div class="container">
 
             <label for="name"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="name" required>
+            <input type="text" placeholder="Enter Username" name="name" id="name" required>
 
             <label for="password"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
             <label for="remember"><b>Remember Me</b></label>
-            <input type="checkbox" placeholder="Enter Password" name="remember">
+            <input type="checkbox" placeholder="Enter Password" id="remember" name="remember">
 
-            <button type="submit">Login</button>
+            <button type="submit" id="submit">Login</button>
 
             {% if try_again %}
 
-            <h3>Please try again, either the username or password was wrong</h3>
+            <h3 id="wrong_password">Please try again, either the username or password was wrong</h3>
 
             {% endif %}
 
             {% if not_registered %}
 
-            <h3>It looks like it's your first time here. Please <a href="/register"> register here </a></h3>
+            <h3 id="not_registered">It looks like it's your first time here. Please <a href="/register"> register here </a></h3>
 
             {% endif %}
 
