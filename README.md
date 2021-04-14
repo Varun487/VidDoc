@@ -83,15 +83,15 @@ python3 VidDoc/manage.py createsuperuser
 ### To be completed before 15th April
 - Explain all work done
 - Fix all diagrams and documents
-- AUTHENTICATION ![DONE](https://img.shields.io/badge/FEATURE-INPROGRESS-blue)
-  - Login ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
-    - Enter site if user exists ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
-    - Mention if any required fields not filled ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
-    - Mention if user not registered ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
-    - Mention if wrong password ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
-    - If remember me is checked, redirect to site next time ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
-    - If remember me is not checked, expire cookie at browser window close ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
-  - Register
+- AUTHENTICATION ![DONE](https://img.shields.io/badge/FEATURE-INPROGRESS-yellow)
+  - Login ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+    - Enter site if user exists ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+    - Mention if any required fields not filled ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+    - Mention if user not registered ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+    - Mention if wrong password ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+    - If remember me is checked, redirect to site next time ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+    - If remember me is not checked, expire cookie at browser window close ![DONE](https://img.shields.io/badge/DONE-brightgreen)
+  - Registers
     - Redirect to login after successful registration
     - Mention if
       - Any required fields not filled
@@ -103,7 +103,7 @@ python3 VidDoc/manage.py createsuperuser
       - Age not correct
       - Phone number not correct
     - Not able to get correct address information ![DONE](https://img.shields.io/badge/BUG-red)
-- Complete appointments
+- Complete appointments ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
   - List all upcoming appointments for a user
   - Button for Booking new appointments
   - Page with form for appointment
@@ -115,9 +115,9 @@ python3 VidDoc/manage.py createsuperuser
     - Redirects to refund
     - Fix Data consistency across all pages
     - Fix appointment booking confirmation across payment
-- Complete Consultations
-- Complete payments
-- Complete Recommendations
-- Complete email reminders
-- Complete test plan document
-- Get approval from a teacher
+- Complete Consultations  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
+- Complete payments  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
+- Complete Recommendations  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
+- Complete email reminders  ![DONE](https://img.shields.io/badge/FEATURE-INCOMPLETE-red)
+- Complete test plan document  ![DONE](https://img.shields.io/badge/DOC-INCOMPLETE-red)
+- Complete final report  ![DONE](https://img.shields.io/badge/DOC-INCOMPLETE-red)
