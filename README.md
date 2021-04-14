@@ -83,14 +83,14 @@ python3 VidDoc/manage.py createsuperuser
 ### To be completed before 15th April
 - Explain all work done
 - Fix all diagrams and documents
-- AUTHENTICATION
-  - Login `DONE`
-    - Enter site if user exists `DONE`
-    - Mention if any required fields not filled `DONE`
-    - Mention if user not registered `DONE`
-    - Mention if wrong password `DONE`
-    - If remember me is checked, redirect to site next time `DONE`
-    - If remember me is not checked, expire cookie at browser window close `DONE`
+- AUTHENTICATION ![DONE](https://img.shields.io/badge/FEATURE-INPROGRESS-blue)
+  - Login ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
+    - Enter site if user exists ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
+    - Mention if any required fields not filled ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
+    - Mention if user not registered ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
+    - Mention if wrong password ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
+    - If remember me is checked, redirect to site next time ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
+    - If remember me is not checked, expire cookie at browser window close ![DONE](https://img.shields.io/badge/-DONE-brightgreen)
   - Register
     - Redirect to login after successful registration
     - Mention if
@@ -102,7 +102,7 @@ python3 VidDoc/manage.py createsuperuser
       - Password not matching
       - Age not correct
       - Phone number not correct
-    - Not able to get correct address information `BUG`
+    - Not able to get correct address information ![DONE](https://img.shields.io/badge/BUG-red)
 - Complete appointments
   - List all upcoming appointments for a user
   - Button for Booking new appointments
