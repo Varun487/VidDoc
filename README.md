@@ -110,18 +110,18 @@ python3 VidDoc/manage.py createsuperuser
       - Age not correct ![DONE]
       - Phone number not correct ![DONE]
     - Not able to get correct address information ![BUGFIXED]
-- Complete Appointments ![FEATUREINCOMPLETE]
-  - List all upcoming appointments for a user  
-  - Button for Booking new appointments
-  - Page with form for appointment
-    - Redirects to recommendations of doctors selecting speciality and symptoms
-    - Redirects to payments
-    - Fix Data consistency across all pages
-    - Fix appointment booking confirmation across payment
-  - Cancel existing appointment
-    - Redirects to refund
-    - Fix Data consistency across all pages
-    - Fix appointment booking confirmation across payment
+- APPOINTMENTS ![FEATUREINCOMPLETE]
+  - List all upcoming appointments for a user  ![INCOMPLETE]
+  - Button for Booking new appointments  ![INCOMPLETE]
+  - Page with form for appointment  ![INCOMPLETE]
+    - Redirects to recommendations of doctors selecting speciality and symptoms  ![INCOMPLETE]
+    - Redirects to payments  ![INCOMPLETE]
+    - Fix Data consistency across all pages  ![INCOMPLETE]
+    - Fix appointment booking confirmation across payment  ![INCOMPLETE]
+  - Cancel existing appointment  ![INCOMPLETE]
+    - Redirects to refund  ![INCOMPLETE]
+    - Fix Data consistency across all pages  ![INCOMPLETE]
+    - Fix appointment booking confirmation across payment  ![INCOMPLETE]
 - Complete Consultations  ![FEATUREINCOMPLETE]
 - Complete Payments  ![FEATUREINCOMPLETE]
 - Complete Recommendations  ![FEATUREINCOMPLETE]
