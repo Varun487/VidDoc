@@ -21,6 +21,7 @@ class Doctor(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     speciality = models.CharField(max_length=500)
     symptoms = models.TextField(default=None, blank=True, null=True)
+    amount = models.IntegerField(default=500)
 
     def __str__(self):
         return self.user.name

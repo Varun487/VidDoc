@@ -33,9 +33,9 @@ class TestLoginPage(StaticLiveServerTestCase):
         self.browser.find_element_by_id('name').send_keys(username)
         # time.sleep(0.5)
         self.browser.find_element_by_id('password').send_keys(password)
-        time.sleep(1)
+        time.sleep(5)
         self.browser.find_element_by_id('submit').click()
-        time.sleep(1)
+        time.sleep(5)
         assert self.browser.find_element_by_id(css_id).text == correct_text
         print('PASSED')
 

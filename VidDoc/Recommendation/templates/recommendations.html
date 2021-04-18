@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VidDoc</title>
+</head>
+<body>
+
+    <center> NavBar <a href="/consultation">Consultations</a> <a href="/appointments">Appointments</a> <a href="/logout">Logout</a> </center>
+    <center><h1 id="appointments_home">{{user.name}} Book an appointment</h1></center>
+
+    <center><b>Select a doctor</b> </center>
+    <center>Step <b>2 of 3</b> </center>
+
+    <form action="/recommendations/selectdoctor" method="post"> {% csrf_token %}
+        <label>Select a doctor</label>
+        <select id="doctors" name="doctor">
+            {% for doctor in doctors %}
+                <option value={{doctor.id}}>{{doctor}}</option>
+            {% endfor %}
+        </select>
+
+        <button>Go to payments -></button>
+
+    </form>
+
+</body>
+</html>
