@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from UserAuthentication.views import login_required
 from UserAuthentication.models import User, Doctor
 from .models import Appointment
-
+from datetime import datetime
 
 @login_required
 def index_appointments(request):
@@ -17,9 +17,22 @@ def index_appointments(request):
 
     # print(request.session['user_id'], no_appointments)
 
+    appo = Appointment.objects.filter(user=request.session['user_id'])
+    aplist = []
+
+    for i in appo:
+        
+        if i.from_date_time.replace(tzinfo=None) >= datetime.now():
+            aplist.append(i)
+    
+
+    def skey(a):
+        return a.from_date_time
+
+    aplist.sort(key = skey)
     context = {
         'no_appointments': no_appointments,
-        'appointments': Appointment.objects.filter(user=request.session['user_id']),
+        'appointments': aplist,
         'user': User.objects.get(id=request.session['user_id'])
     }
 
