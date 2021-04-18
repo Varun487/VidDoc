@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from UserAuthentication.views import login_required
 from UserAuthentication.models import User, Doctor
 from .models import Appointment
-
+from datetime import datetime
+import pytz
+utc = pytz.UTC
 
 @login_required
 def index_appointments(request):
@@ -16,6 +18,10 @@ def index_appointments(request):
         no_appointments = False
 
     # print(request.session['user_id'], no_appointments)
+    appointments = list(filter(lambda appointment: appointment.from_date_time.replace(tzinfo=utc) < datetime.now().replace(tzinfo=utc), Appointment.objects.filter(user=request.session['user_id'])))
+    print(Appointment.objects.filter(user=request.session['user_id']))
+    print(datetime.now())
+    print("Appointments: ", appointments)
 
     context = {
         'no_appointments': no_appointments,

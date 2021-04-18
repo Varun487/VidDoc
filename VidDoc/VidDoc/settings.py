@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'Consultation',
     'Payments',
     'Recommendation',
-    'Reminders'
 ]
 
 MIDDLEWARE = [

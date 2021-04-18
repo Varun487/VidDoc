@@ -12,16 +12,58 @@
     <center><b>Select a doctor</b> </center>
     <center>Step <b>2 of 3</b> </center>
 
+    <form action="/recommendations/filterdoctors" method="post"> {% csrf_token %}
+
+        <h3>Specialities</h3>
+        <ul>
+            {% for speciality in selected_speciality %}
+                <input type="radio" name="speciality" value='{{speciality}}' checked="checked">{{speciality}}</input><br>
+            {% endfor %}
+            {% for speciality in specialities %}
+                <input type="radio" name="speciality" value='{{speciality}}'>{{speciality}}</input><br>
+            {% endfor %}
+        </ul>
+
+        <h3>Symptoms</h3>
+        <ul>
+            {% for symptom in selected_symptoms %}
+                <input type="checkbox" name="symptoms" value='{{symptom}}' checked>{{symptom}}</input><br>
+            {% endfor %}
+            {% for symptom in symptoms %}
+                <input type="checkbox" name="symptoms" value='{{symptom}}'>{{symptom}}</input><br>
+            {% endfor %}
+        </ul>
+
+        <button>Recommend doctors</button>
+
+    </form>
+
+
+
+    <h3>All doctors</h3>
+
     <form action="/recommendations/selectdoctor" method="post"> {% csrf_token %}
         <label>Select a doctor</label>
-        <select id="doctors" name="doctor">
-            {% for doctor in doctors %}
-                <option value={{doctor.id}}>{{doctor}}</option>
-            {% endfor %}
-        </select>
+        <ul>
+            {% if doctors %}
+
+            {% else %}
+                No recommended doctors in category
+            {% endif %}
+        {% for doctor in doctors %}
+            <input type="radio" name="doctor" value={{doctor.id}}>
+                <div>
+                    Name: {{doctor.user.name}} <br>
+                    Speciality: {{doctor.speciality}} <br>
+                    Symptoms treated: {{doctor.symptoms}} <br>
+                    Cost per session: {{doctor.amount}} <br>
+                </div>
+            </input>
+            <br>
+        {% endfor %}
+        </ul>
 
         <button>Go to payments -></button>
-
     </form>
 
 </body>
