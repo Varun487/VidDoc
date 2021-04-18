@@ -15,12 +15,6 @@ def index_appointments(request):
     if Appointment.objects.filter(user=request.session['user_id']):
         no_appointments = False
 
-    # print(request.session['user_id'], no_appointments)
-    appointments = list(filter(lambda appointment: appointment.from_date_time.replace(tzinfo=utc) < datetime.now().replace(tzinfo=utc), Appointment.objects.filter(user=request.session['user_id'])))
-    print(Appointment.objects.filter(user=request.session['user_id']))
-    print(datetime.now())
-    print("Appointments: ", appointments)
-
     appo = Appointment.objects.filter(user=request.session['user_id'])
     aplist = []
 
