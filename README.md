@@ -128,7 +128,6 @@ python3 VidDoc/manage.py createsuperuser
     - Create payment form with phone number and OTP ![DONE]
     - Update appointment data for the user ![DONE]
 - Complete Recommendations  ![FEATUREINCOMPLETE]
-- Complete Email Reminders  ![FEATUREINCOMPLETE]
 - Complete test plan document  ![FEATUREINCOMPLETE]
 - Complete final report  ![DOCINCOMPLETE]
 
