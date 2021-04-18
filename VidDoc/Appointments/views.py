@@ -63,3 +63,9 @@ def index_appointment_info(request):
         # print(request.session.keys())
 
     return redirect('/recommendations')
+
+def index_cancel_appointment(request, id):
+    print(id)
+    print(Appointment.objects.get(id=id))
+    Appointment.objects.get(id=id).delete()
+    return redirect('/appointments')

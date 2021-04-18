@@ -8,7 +8,7 @@ An online doctor consultation software (similar to the Practo website).
 # Components in the project
 
 ## User Authentication
-###### Varun Seshu
+###### Varun Seshu and Ajay
 - Django User authentication
 - Secure storage of passwords (encrypted)
 - Handle cases of wrong password or username
@@ -34,16 +34,11 @@ An online doctor consultation software (similar to the Practo website).
 - Refund in case of cancellation
 
 ## Recommendations
-###### Hritik Shanbhag
+###### Varun Seshu and Hritik Shanbhag 
 - Search box to search for doctors by name
 - Checkboxes to select symptoms
 - Checkboxes to select speciality
 - Reccomendation according to above criteria
-
-## Reminders
-###### Ajay
-- Send email to patient’s provided email address 5 minutes before sheduled appointment time
-- Send link of meeting with the email
 
 # To build this on your computer
 
@@ -81,16 +76,7 @@ python3 VidDoc/manage.py createsuperuser
 
 # TODO
 ### To be completed before 15th April
-- Explain all work done  ![MEETINGINCOMPLETE]
-- Fix all diagrams and documents  ![DOCINCOMPLETE]
-- Automated Testing  ![FEATUREINCOMPLETE]
-    - Set up selenium automated testing ![DONE]
-    - Write 10 tests for Authentication  ![DONE]
-    - Write 10 tests for Appointments ![INCOMPLETE]
-    - Write 10 tests for Consultations ![INCOMPLETE]
-    - Write 10 tests for Payments ![INCOMPLETE]
-    - Write 10 tests for Recommendations ![INCOMPLETE]
-    - Write 10 tests for Email Reminders ![INCOMPLETE]
+- Complete test plan document  ![DOCCOMPLETE]
 - AUTHENTICATION ![FEATURECOMPLETE]
   - Login ![DONE]
     - Enter site if user exists ![DONE]
@@ -110,26 +96,36 @@ python3 VidDoc/manage.py createsuperuser
       - Age not correct ![DONE]
       - Phone number not correct ![DONE]
     - Not able to get correct address information ![BUGFIXED]
-- APPOINTMENTS ![FEATUREINCOMPLETE]
+- APPOINTMENTS ![FEATURECOMPLETE]
   - List all upcoming appointments for a user  ![DONE]
   - Button for Booking new appointments  ![DONE]
   - Page with form for appointment  ![DONE]
-    - Redirects to recommendations of doctors selecting speciality and symptoms  ![INCOMPLETE]
-    - Redirects to payments  ![INCOMPLETE]
+    - Redirects to recommendations of doctors selecting speciality and symptoms  ![DONE]
+    - Redirects to payments  ![DONE]
     - Fix Data consistency across all pages  ![DONE]
-    - Fix appointment booking confirmation after payment  ![INCOMPLETE]
+    - Fix appointment booking confirmation after payment  ![DONE]
   - Button for Cancelling existing appointments  ![DONE]  
-  - Cancel existing appointment dialogue box  ![INCOMPLETE]
+  - Cancel existing appointment dialogue box  ![DONE]
+- Complete Payments  ![FEATURECOMPLETE]
+    - Create payment form with phone number and OTP ![DONE]
+    - Update appointment data for the user ![DONE]
 - Complete Consultations  ![FEATUREINCOMPLETE]
     - List all upcoming appointments and previous consultation ![INCOMPLETE]
     - Create prescriptions for consultations ![INCOMPLETE]
     - Add meeting link for upcoming appointments ![INCOMPLETE]
-- Complete Payments  ![FEATURECOMPLETE]
-    - Create payment form with phone number and OTP ![DONE]
-    - Update appointment data for the user ![DONE]
 - Complete Recommendations  ![FEATUREINCOMPLETE]
-- Complete test plan document  ![FEATUREINCOMPLETE]
-- Complete final report  ![DOCINCOMPLETE]
+- Complete Final submission ![DOCINCOMPLETE]
+  - Folder in Drive ![INCOMPLETE]
+  - Submission in Edmodo ![INCOMPLETE]
+- Automated Testing  ![FEATUREINCOMPLETE]
+    - Set up selenium automated testing ![DONE]
+    - Write 10 tests for Authentication  ![DONE]
+    - Write 10 tests for Appointments ![INCOMPLETE]
+    - Write 10 tests for Consultations ![INCOMPLETE]
+    - Write 10 tests for Payments ![INCOMPLETE]
+    - Write 10 tests for Recommendations ![INCOMPLETE]
+    - Write 10 tests for Email Reminders ![INCOMPLETE]
+- CSS and final touches for the website ![FEATUREINCOMPLETE]
 
 [DONE]: https://img.shields.io/badge/DONE-brightgreen
 [INCOMPLETE]: https://img.shields.io/badge/INCOMPLETE-red
@@ -138,3 +134,4 @@ python3 VidDoc/manage.py createsuperuser
 [FEATURECOMPLETE]: https://img.shields.io/badge/FEATURE-COMPLETE-brightgreen
 [MEETINGINCOMPLETE]: https://img.shields.io/badge/MEETING-INCOMPLETE-red
 [DOCINCOMPLETE]: https://img.shields.io/badge/DOC-INCOMPLETE-red
+[DOCCOMPLETE]: https://img.shields.io/badge/DOC-COMPLETE-brightgreen
