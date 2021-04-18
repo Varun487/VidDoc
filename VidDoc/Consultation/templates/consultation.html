@@ -2,11 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consult</title>
+    <title>VidDoc</title>
 </head>
 <body>
-    hi
+    <center> NavBar <a href="/consultation">Consultations</a> <a href="/appointments">Appointments</a> <a href="/logout">Logout</a> </center>
+    <center><h1 id="appointments_home">Welcome {{ user.name }} to VidDoc Consultation History</h1></center>
+
+
+    <hr>
+    {% for consultation in consultations %}
+    <center>Title: {{ consultation.title }}</center>
+    <center>User: {{ consultation.user }}</center>
+    <center>Doctor: {{ consultation.doctor }}</center>
+    <center>Description: {{ consultation.description }}</center>
+
+    <form action="{{consultation.id}}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{consultation.id}}">
+        <center><input type="submit" name="submit" value="Prescription" required></center>
+    </form>
+    
+    <hr>
+    {% endfor %}
+
+    {% if no_appointments %}
+        <h2><center>No Consultations</center></h2>
+    {% endif %}
+
 </body>
 </html>

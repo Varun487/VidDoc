@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidDoc</title>
+</head>
+<body>
+
+    <center> NavBar <a href="/consultation">Consultations</a> <a href="/appointments">Appointments</a> <a href="/logout">Logout</a> </center>
+    <center><h1 id="appointments_home">Welcome {{ user.name }} to VidDoc Prescriptions</h1></center>
+    <hr>
+    <center><h1>{{ consultation.title }}</h1></center>
+    <center>User: {{ consultation.user }}</center>
+    <center>Doctor: {{ consultation.doctor }}</center>
+    <center>Description: {{ consultation.description }}</center>
+    <center>Time: {{ consultation.from_date_time }} to {{ consultation.to_date_time }}</center>
+    <hr>
+
+    <h3>Prescriptions from {{consultation.doctor}}</h3>
+    {% for drug in prescription %}
+        <h4>Drug name: {{drug.Name}}</h5>
+        <p>Drug class: {{drug.drugclass}}</p>
+        <p>Price: {{drug.Price}}</p>
+        <br>
+    {% endfor %}
+</body>
+</html>
