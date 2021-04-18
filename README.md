@@ -14,6 +14,8 @@ An online doctor consultation software (similar to the Practo website).
 - Handle cases of wrong password or username
 - Redirect to login in case a user is already registered
 
+###### NOTE: Doctors can only be added to the database through admin and cannot register through the registration form
+
 ## Appointments
 ###### Varun Seshu
 - Booking new appointments
