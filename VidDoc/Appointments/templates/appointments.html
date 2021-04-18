@@ -12,13 +12,16 @@
 
     <hr>
     {% for appointment in appointments %}
+    <form action="/appointments/cancelappointment/{{appointment.id}}" method="post">
+    {% csrf_token %}
     <center>Title: {{ appointment.title }}</center>
     <center>User: {{ appointment.user }}</center>
     <center>Doctor: {{ appointment.doctor }}</center>
-    <center>Link: {{ appointment.link }}</center>
+    <center>Link: <a href="{{ appointment.link }}">{{ appointment.link }}</a></center>
     <center>Description: {{ appointment.description }}</center>
     <center>Time: {{ appointment.from_date_time }} to {{ appointment.to_date_time }}</center>
-    <center><button>Cancel Appointment</button></center>
+    <center><input type="submit" value="Cancel"></center>
+    </form>
     <hr>
     {% endfor %}
 
