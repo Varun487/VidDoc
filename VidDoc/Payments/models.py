@@ -1,7 +1,5 @@
 from django.db import models
-from django.contrib.auth import get_user_model
-
-User = get_user_model()
+from UserAuthentication.models import User,Doctor
 
 class Transaction(models.Model):
     made_by = models.ForeignKey(User, related_name='transactions', 
@@ -15,3 +13,4 @@ class Transaction(models.Model):
         if self.order_id is None and self.made_on and self.id:
             self.order_id = self.made_on.strftime('PAY2ME%Y%m%dODR') + str(self.id)
         return super().save(*args, **kwargs)
+
