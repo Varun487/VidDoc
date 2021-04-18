@@ -8,14 +8,14 @@ An online doctor consultation software (similar to the Practo website).
 # Components in the project
 
 ## User Authentication
-###### Varun Seshu
+###### Varun Seshu and Ajay
 - Django User authentication
 - Secure storage of passwords (encrypted)
 - Handle cases of wrong password or username
 - Redirect to login in case a user is already registered
 
 ## Appointments
-###### Varun Seshu and Ajay
+###### Varun Seshu
 - Booking new appointments
 - Select speciality and doctor
 - Cancel existing appointment
@@ -34,7 +34,7 @@ An online doctor consultation software (similar to the Practo website).
 - Refund in case of cancellation
 
 ## Recommendations
-###### Hritik Shanbhag and Varun Seshu
+###### Varun Seshu and Hritik Shanbhag 
 - Search box to search for doctors by name
 - Checkboxes to select symptoms
 - Checkboxes to select speciality
