@@ -17,7 +17,7 @@ def payment(request):
         print(request.session.keys())
         # print(request.session['doctor_id'])
         print(request.session['appointment_data_time'])
-        from_date_time = datetime.strptime(request.session['appointment_data_time'], '%m/%d/%Y %H:%M %p')
+        from_date_time = datetime.strptime(request.session['appointment_data_time'], '%m/%d/%Y %I:%M %p')
         print(from_date_time)
         to_date_time = from_date_time + timedelta(hours =1)
         print(to_date_time)
