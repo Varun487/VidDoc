@@ -106,17 +106,17 @@ python3 VidDoc/manage.py createsuperuser
     - Fix appointment booking confirmation after payment  ![DONE]
   - Button for Cancelling existing appointments  ![DONE]  
   - Cancel existing appointment dialogue box  ![DONE]
+  - Appointments should only be made if a date after now is chosen ![BUG]
 - Complete Payments  ![FEATURECOMPLETE]
     - Create payment form with phone number and OTP ![DONE]
     - Update appointment data for the user ![DONE]
-- Complete Consultations  ![FEATUREINCOMPLETE]
-    - List all upcoming appointments and previous consultation ![INCOMPLETE]
-    - Create prescriptions for consultations ![INCOMPLETE]
-    - Add meeting link for upcoming appointments ![INCOMPLETE]
-- Complete Recommendations  ![FEATUREINCOMPLETE]
-- Complete Final submission ![DOCINCOMPLETE]
-  - Folder in Drive ![INCOMPLETE]
-  - Submission in Edmodo ![INCOMPLETE]
+- Complete Consultations  ![FEATURECOMPLETE]
+    - List all upcoming appointments and previous consultation ![DONE]
+    - Create prescriptions for consultations ![DONE]
+- Complete Recommendations  ![FEATURECOMPLETE]
+- Complete Final submission ![DOCCOMPLETE]
+  - Folder in Drive ![DONE]
+  - Submission in Edmodo ![DONE]
 - Automated Testing  ![FEATUREINCOMPLETE]
     - Set up selenium automated testing ![DONE]
     - Write 10 tests for Authentication  ![DONE]
@@ -129,6 +129,7 @@ python3 VidDoc/manage.py createsuperuser
 
 [DONE]: https://img.shields.io/badge/DONE-brightgreen
 [INCOMPLETE]: https://img.shields.io/badge/INCOMPLETE-red
+[BUG]: https://img.shields.io/badge/BUG-red
 [BUGFIXED]: https://img.shields.io/badge/BUG-FIXED-brightgreen
 [FEATUREINCOMPLETE]: https://img.shields.io/badge/FEATURE-INCOMPLETE-red
 [FEATURECOMPLETE]: https://img.shields.io/badge/FEATURE-COMPLETE-brightgreen
