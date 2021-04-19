@@ -14,6 +14,8 @@
 
     <form action="/recommendations/filterdoctors" method="post"> {% csrf_token %}
 
+        <input type="text" name="docname" placeholder="Doctor Name">
+
         <h3>Specialities</h3>
         <ul>
             {% for speciality in selected_speciality %}
@@ -45,6 +47,9 @@
     <form action="/recommendations/selectdoctor" method="post"> {% csrf_token %}
         <label>Select a doctor</label>
         <ul>
+            {% if flag %}
+                Please enter a valid doctor name that exist<br>
+            {% endif %}
             {% if doctors %}
 
             {% else %}
@@ -63,7 +68,7 @@
         {% endfor %}
         </ul>
 
-        <button>Go to payments -></button>
+        <button onclick="return confirm('Do you want to continue?');" >Go to payments -></button>
     </form>
 
 </body>

@@ -6,15 +6,22 @@
 </head>
 <body>
     <center> NavBar <a href="/consultation">Consultations</a> <a href="/appointments">Appointments</a> <a href="/logout">Logout</a> </center>
-    <center><h1 id="appointments_home">Welcome {{ user.name }} to VidDoc Consultation History</h1></center>
+    <center><h1 id="appointments_home">Welcome {{ user.name }} to VidDoc Consultations</h1></center>
+    <hr>
+    <center><h2>Consultation History</h2></center>
 
-
+    {% if no_consultation %}
+        <h2><center>No Consultation history</center></h2>
+    {% endif %}
     <hr>
     {% for consultation in consultations %}
     <center>Title: {{ consultation.title }}</center>
     <center>User: {{ consultation.user }}</center>
     <center>Doctor: {{ consultation.doctor }}</center>
-    <center>Description: {{ consultation.description }}</center>
+    <div style="text-align: center;"><center style="display: none;" id="c{{ consultation.id }}" >Description: {{ consultation.description }}</center>
+        <button id="b{{consultation.id}}" onclick='document.getElementById("c{{consultation.id}}").style.display="block";document.getElementById("b{{consultation.id}}").style.display="none"'> Details </button>
+    
+    </div>
 
     <form action="{{consultation.id}}" method="POST">
         {% csrf_token %}
@@ -25,9 +32,35 @@
     <hr>
     {% endfor %}
 
+    
+
+
+
+    <center><h2>Upcoming appointments</h2></center>
+
     {% if no_appointments %}
-        <h2><center>No Consultations</center></h2>
+        <h2><center>No upcoming appointments scheduled</center></h2>
     {% endif %}
+    <hr>
+    {% for appointment in appointments %}
+    <form action="{{appointment.link}}" method="post" onsubmit="return confirm('Do you want to meet?');">
+    {% csrf_token %}
+    <center>Title: {{ appointment.title }}</center>
+    <center>User: {{ appointment.user }}</center>
+    <center>Doctor: {{ appointment.doctor }}</center>
+    <center>Link: <a href="{{ appointment.link }}">{{ appointment.link }}</a></center>
+    <center>Description: {{ appointment.description }}</center>
+    <center>Time: {{ appointment.from_date_time }} to {{ appointment.to_date_time }}</center>
+    <center><input type="submit" value="Meet"></center>
+    </form>
+    <form action="/appointments/cancelappointment/{{appointment.id}}" method="post">
+        {% csrf_token %}
+        <center><input type="submit" value="Cancel"></center>
+    </form>
+    <hr>
+    {% endfor %}
+
+    
 
 </body>
 </html>

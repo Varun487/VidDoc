@@ -5,12 +5,7 @@ from django.core import serializers
 
 
 def index_recommendations(request):
-    # print(Doctor.objects.all())
-    # print(serializers.serialize('json', Doctor.objects.all()))
-    # print(Doctor.objects.all())
-
-    # print(request.session['speciality'])
-    # print(request.session['symptoms'])
+   
 
     specialities = set()
     selected_speciality = set()
@@ -20,13 +15,22 @@ def index_recommendations(request):
     doctors = Doctor.objects.all()
     filtered_speciality_doctors = []
     filtered_symptoms_doctors = []
+    filtered_name_doctor = []
+    docflag = True
+    # print(doctors[0].user.name)
+    try:
+        filtered_name_doctor = []
+        for doctor in doctors:
+            if request.session['docname'] in doctor.user.name:
+                filtered_name_doctor.append(doctor)
+                docflag = False
+    except:
+        filtered_name_doctor = doctors
+
 
     for doctor in Doctor.objects.all():
         print(doctor.speciality)
-        # print(doctor.symptoms.split(','))
         for symptom in doctor.symptoms.split(','):
-            # print(symptom.strip())
-            # symptoms.add(symptom.strip())
             if 'symptoms' in request.session and request.session['symptoms'] is not None:
                 if symptom.strip() not in request.session['symptoms']:
                     symptoms.add(symptom.strip())
@@ -43,52 +47,30 @@ def index_recommendations(request):
         else:
             specialities.add(doctor.speciality)
 
-    # print(specialities)
-    # print(selected_speciality)
-    # print(symptoms)
-    # print(selected_symptoms)
-    # print(filtered_speciality_doctors)
-    # print(filtered_symptoms_doctors)
+    
 
     if 'speciality' in request.session and request.session['speciality'] is not None:
-        # print(request.session['speciality'])
-        for doctor in doctors:
-            # print(doctor)
-            # print(doctor.speciality)
-            # print(request.session['speciality'])
+        
+        for doctor in filtered_name_doctor:
             if doctor.speciality == request.session['speciality'][0]:
-                # print(doctor.speciality.split()[0])
                 filtered_speciality_doctors.append(doctor)
 
-    # print(filtered_speciality_doctors)
-    # print(filtered_symptoms_doctors)
-
-    # print('Doctors', doctors)
-    # print('Filtered Doctors', filtered_speciality_doctors)
-
     if not filtered_speciality_doctors:
-        filtered_speciality_doctors = doctors
+        filtered_speciality_doctors = filtered_name_doctor
 
     if 'symptoms' in request.session and request.session['symptoms'] is not None:
-        # print(request.session['symptoms'])
+        
         for doctor in filtered_speciality_doctors:
-            # print(doctor)
-            # print(doctor.symptoms.split(','))
             doc_symptoms = set(map(lambda x: x.strip(), doctor.symptoms.split(',')))
             patient_symptoms = set(request.session['symptoms'])
-            # print(doc_symptoms)
-            # print(patient_symptoms)
             if patient_symptoms.issubset(doc_symptoms):
                 filtered_symptoms_doctors.append(doctor)
-
-    # print(filtered_speciality_doctors)
-    # print(filtered_symptoms_doctors)
-
     if not filtered_symptoms_doctors and (('symptoms' not in request.session) or (request.session['symptoms'] is None)):
         filtered_symptoms_doctors = filtered_speciality_doctors
 
     context = {
         'user': User.objects.get(id=request.session['user_id']),
+        'flag':docflag,
         'doctors': filtered_symptoms_doctors,
         'specialities': specialities,
         'selected_speciality': selected_speciality,
@@ -140,7 +122,7 @@ def index_filter_doctor(request):
 
         request.session['speciality'] = speciality
         request.session['symptoms'] = symptoms
-
+        request.session['docname'] = request.POST['docname']
         # print(request.session['speciality'])
         # print(request.session['symptoms'])
 

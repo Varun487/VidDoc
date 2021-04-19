@@ -12,8 +12,7 @@ def index_appointments(request):
     # print(Appointment.objects.filter(user=1))
 
     no_appointments = True
-    if Appointment.objects.filter(user=request.session['user_id']):
-        no_appointments = False
+   
 
     appo = Appointment.objects.filter(user=request.session['user_id'])
     aplist = []
@@ -28,6 +27,8 @@ def index_appointments(request):
         return a.from_date_time
 
     aplist.sort(key = skey)
+    if len(aplist)!=0:
+        no_appointments=False
     context = {
         'no_appointments': no_appointments,
         'appointments': aplist,

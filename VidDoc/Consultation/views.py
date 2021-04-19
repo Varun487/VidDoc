@@ -14,28 +14,43 @@ def index_consultation(request):
     # print(Appointment.objects.filter(user=1))
 
     no_appointments = True
-    if Appointment.objects.filter(user=request.session['user_id']):
-        no_appointments = False
-
     # print(request.session['user_id'], no_appointments)
 
     appo = Appointment.objects.filter(user=request.session['user_id'])
-    aplist = []
+    conlist = []
 
     for i in appo:
         i.from_date_time.replace(tzinfo=None)
         if i.from_date_time.replace(tzinfo=None) < datetime.now():
-            aplist.append(i)
+            conlist.append(i)
     # print(aplist)
 
     def skey(a):
         return a.from_date_time
 
-    aplist.sort(key = skey, reverse = True)
+    conlist.sort(key = skey, reverse = True)
+
+    no_consultation = True
+    if len(conlist)!=0:
+        no_consultation = False
+
+    aplist = []
+
+    for i in appo:
+        
+        if i.from_date_time.replace(tzinfo=None) >= datetime.now():
+            aplist.append(i)
     
+
+    aplist.sort(key = skey)
+
+    if len(aplist)!=0:
+        no_appointments=False
     context = {
         'no_appointments': no_appointments,
-        'consultations': aplist,
+        'no_consultation': no_consultation,
+        'appointments': aplist,
+        'consultations': conlist,
         'user': User.objects.get(id=request.session['user_id'])
     }
 
