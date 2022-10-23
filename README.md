@@ -119,15 +119,6 @@ python3 VidDoc/manage.py createsuperuser
 - Complete Final submission ![DOCCOMPLETE]
   - Folder in Drive ![DONE]
   - Submission in Edmodo ![DONE]
-- Automated Testing  ![FEATUREINCOMPLETE]
-    - Set up selenium automated testing ![DONE]
-    - Write 10 tests for Authentication  ![DONE]
-    - Write 10 tests for Appointments ![INCOMPLETE]
-    - Write 10 tests for Consultations ![INCOMPLETE]
-    - Write 10 tests for Payments ![INCOMPLETE]
-    - Write 10 tests for Recommendations ![INCOMPLETE]
-    - Write 10 tests for Email Reminders ![INCOMPLETE]
-- CSS and final touches for the website ![FEATUREINCOMPLETE]
 
 [DONE]: https://img.shields.io/badge/DONE-brightgreen
 [INCOMPLETE]: https://img.shields.io/badge/INCOMPLETE-red
