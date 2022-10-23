@@ -108,7 +108,7 @@ python3 VidDoc/manage.py createsuperuser
     - Fix appointment booking confirmation after payment  ![DONE]
   - Button for Cancelling existing appointments  ![DONE]  
   - Cancel existing appointment dialogue box  ![DONE]
-  - Appointments should only be made if a date after now is chosen ![BUG]
+  - Appointments should only be made if a date after now is chosen ![BUGFIXED]
 - Complete Payments  ![FEATURECOMPLETE]
     - Create payment form with phone number and OTP ![DONE]
     - Update appointment data for the user ![DONE]
