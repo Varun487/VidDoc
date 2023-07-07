@@ -1,3 +1,5 @@
+#### NOTE: This project is archived
+
 # VidDoc
 ###### OOAD SWE LAB Project PES University Sem 6 
 
